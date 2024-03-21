@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
+import { MasonryProjects } from '../components';
 
 const SectionContainer = styled(motion.section)`
     flex-grow: 1;
@@ -27,6 +28,7 @@ export const Projects = () => {
             transition={{ duration: 0.5 }}
         >
             <Heading>Projects</Heading>
+            <MasonryProjects />
         </SectionContainer>
     );
 };

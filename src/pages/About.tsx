@@ -22,7 +22,7 @@ const Heading = styled.h1`
 
 const AboutGroup = styled.div`
     display: flex;
-    gap: 2.4rem;
+    gap: 3.6rem;
 `;
 
 const Image = styled.img`
