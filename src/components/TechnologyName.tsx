@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import React, { useEffect, useRef, useState } from 'react';
 
-const technologies = ['React', 'Next.js', 'HTML', 'CSS', 'Front-end'];
+const technologies = ['Front-end', 'React', 'Next.js', 'HTML', 'CSS'];
+const defaultMilliseconds = 300;
+const extendedMilliseconds = 1500;
 
 const StyledTechnology = styled.span`
     border-right: 3px solid;
@@ -30,7 +32,7 @@ export const TechnologyName = () => {
                     setDisplayedWord(
                         displayedWord.slice(0, displayedWord.length - 1),
                     );
-                }, 300);
+                }, defaultMilliseconds);
             } else {
                 isDeleting.current = false;
                 if (wordIndex.current === technologies.length - 1) {
@@ -43,25 +45,23 @@ export const TechnologyName = () => {
                     setDisplayedWord(
                         technologies[wordIndex.current].slice(0, 1),
                     );
-                }, 300);
+                }, defaultMilliseconds);
             }
         } else {
             const currentTechnology = technologies[wordIndex.current];
             if (displayedWord.length < currentTechnology.length) {
-                const milliseconds = 300;
-
                 setTimeout(() => {
                     setDisplayedWord(
                         displayedWord + currentTechnology[displayedWord.length],
                     );
-                }, milliseconds);
+                }, defaultMilliseconds);
             } else {
                 isDeleting.current = true;
                 setTimeout(() => {
                     setDisplayedWord(
                         displayedWord.slice(0, displayedWord.length - 1),
                     );
-                }, 1500);
+                }, extendedMilliseconds);
             }
         }
     }, [displayedWord]);
