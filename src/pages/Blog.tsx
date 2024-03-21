@@ -9,12 +9,13 @@ const SectionContainer = styled(motion.section)`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     box-sizing: border-box;
 `;
 
 const Heading = styled.h1`
-    font-size: 6.4rem;
+    margin: 3.6rem 0;
+    font-size: 3.6rem;
     font-weight: 500;
 `;
 
