@@ -19,6 +19,12 @@ const Heading = styled.h1`
     font-weight: 500;
 `;
 
+const Text = styled.p`
+    font-size: 1.8rem;
+    opacity: 0.9;
+    text-align: justify;
+`;
+
 export const Blog = () => {
     return (
         <SectionContainer
@@ -27,6 +33,7 @@ export const Blog = () => {
             transition={{ duration: 0.5 }}
         >
             <Heading>Blog</Heading>
+            <Text>Coming soon! 🖥️</Text>
         </SectionContainer>
     );
 };

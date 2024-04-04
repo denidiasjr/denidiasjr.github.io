@@ -23,6 +23,12 @@ const Heading = styled.h1`
 const AboutGroup = styled.div`
     display: flex;
     gap: 3.6rem;
+
+    @media (max-width: 871px) {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.4rem;
+    }
 `;
 
 const Image = styled.img`
