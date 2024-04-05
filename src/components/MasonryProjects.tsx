@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+import { BEES, DezINove, Farfetch } from './projects';
 import ImageFarfetch from '../images/projects/farfetch.png';
 import ImageBees from '../images/projects/bees.png';
 import ImageVenturus from '../images/projects/venturus.png';
@@ -39,63 +40,98 @@ const GridItem = styled.div<{ index: number; height: number }>`
 const getRandomInt = (max: number) => Math.floor(Math.random() * max);
 const getRandomHeight = () => getRandomInt(100) + 250;
 
-const listOfProjects = [
+interface Project {
+    title: string;
+    background: string;
+    image: string;
+    content: ReactNode;
+}
+
+const listOfProjects: Project[] = [
     {
+        title: 'Farfetch',
         background: 'white',
         image: ImageFarfetch,
+        content: <Farfetch />,
     },
     {
+        title: 'BEES',
         background: '#fdff00',
         image: ImageBees,
+        content: <BEES />,
     },
     {
+        title: 'Superlogica',
         background: '#1034f2',
         image: ImageSuperlogica,
+        content: <></>,
     },
     {
+        title: 'Venturus',
         background: '#A6379E',
         image: ImageVenturus,
+        content: <></>,
     },
     {
+        title: 'Heineken',
         background: '#00541e',
         image: ImageHeineken,
+        content: <></>,
     },
     {
+        title: 'Superior Industries',
         background: 'black',
         image: ImageSuperiorIndustries,
+        content: <></>,
     },
     {
+        title: 'Recanto Criativo',
         background: '#6231eb',
         image: ImageRecantoCriativo,
+        content: <></>,
     },
     {
+        title: 'SIICUSP',
         background: 'white',
         image: ImageSIICUSP,
+        content: <></>,
     },
     {
+        title: '10i9',
         background: 'white',
         image: Image10i9,
+        content: <DezINove />,
     },
     {
+        title: 'IFMS',
         background: 'white',
         image: ImageIFMS,
+        content: <></>,
     },
 ];
 
 export const MasonryProjects = () => {
     return (
         <Grid>
-            {listOfProjects.map(({ background, image }, index) => {
-                return (
-                    <GridItem
-                        key={image}
-                        index={index + 1}
-                        height={getRandomHeight()}
-                    >
-                        <ProjectImage background={background} src={image} />
-                    </GridItem>
-                );
-            })}
+            {listOfProjects.map(
+                ({ title, background, image, content }, index) => {
+                    return (
+                        <GridItem
+                            key={title}
+                            index={index + 1}
+                            height={getRandomHeight()}
+                        >
+                            <ProjectImage
+                                title={title}
+                                background={background}
+                                src={image}
+                            >
+                                {content}
+                            </ProjectImage>
+                        </GridItem>
+                    );
+                },
+            )}
         </Grid>
     );
 };
