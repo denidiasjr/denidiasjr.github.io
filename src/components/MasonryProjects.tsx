@@ -1,5 +1,12 @@
 import React, { ReactNode } from 'react';
-import { BEES, DezINove, Farfetch } from './projects';
+import {
+    BEES,
+    DezINove,
+    Farfetch,
+    Heineken,
+    Superlogica,
+    Venturus,
+} from './projects';
 import ImageFarfetch from '../images/projects/farfetch.png';
 import ImageBees from '../images/projects/bees.png';
 import ImageVenturus from '../images/projects/venturus.png';
@@ -64,19 +71,19 @@ const listOfProjects: Project[] = [
         title: 'Superlogica',
         background: '#1034f2',
         image: ImageSuperlogica,
-        content: <></>,
+        content: <Superlogica />,
     },
     {
         title: 'Venturus',
         background: '#A6379E',
         image: ImageVenturus,
-        content: <></>,
+        content: <Venturus />,
     },
     {
         title: 'Heineken',
         background: '#00541e',
         image: ImageHeineken,
-        content: <></>,
+        content: <Heineken />,
     },
     {
         title: 'Superior Industries',
