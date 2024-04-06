@@ -4,6 +4,9 @@ import {
     DezINove,
     Farfetch,
     Heineken,
+    IFMS,
+    SIICUSP,
+    SuperiorIndustries,
     Superlogica,
     Venturus,
 } from './projects';
@@ -19,6 +22,7 @@ import Image10i9 from '../images/projects/10i9.png';
 import ImageRecantoCriativo from '../images/projects/recanto-criativo.png';
 import styled from '@emotion/styled';
 import ProjectImage from './ProjectImage';
+import RecantoCriativo from './projects/RecantoCriativo';
 
 const Grid = styled.div`
     columns: 6 250px;
@@ -89,19 +93,19 @@ const listOfProjects: Project[] = [
         title: 'Superior Industries',
         background: 'black',
         image: ImageSuperiorIndustries,
-        content: <></>,
+        content: <SuperiorIndustries />,
     },
     {
         title: 'Recanto Criativo',
         background: '#6231eb',
         image: ImageRecantoCriativo,
-        content: <></>,
+        content: <RecantoCriativo />,
     },
     {
         title: 'SIICUSP',
         background: 'white',
         image: ImageSIICUSP,
-        content: <></>,
+        content: <SIICUSP />,
     },
     {
         title: '10i9',
@@ -113,7 +117,7 @@ const listOfProjects: Project[] = [
         title: 'IFMS',
         background: 'white',
         image: ImageIFMS,
-        content: <></>,
+        content: <IFMS />,
     },
 ];
 
