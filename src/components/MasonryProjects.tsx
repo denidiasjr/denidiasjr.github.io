@@ -10,6 +10,7 @@ import {
     Superlogica,
     Venturus,
 } from './projects';
+import ImageRevolut from '../images/projects/revolut.png';
 import ImageFarfetch from '../images/projects/farfetch.png';
 import ImageBees from '../images/projects/bees.png';
 import ImageVenturus from '../images/projects/venturus.png';
@@ -23,6 +24,7 @@ import ImageRecantoCriativo from '../images/projects/recanto-criativo.png';
 import styled from '@emotion/styled';
 import ProjectImage from './ProjectImage';
 import RecantoCriativo from './projects/RecantoCriativo';
+import Revolut from './projects/Revolut';
 
 const Grid = styled.div`
     columns: 6 250px;
@@ -59,6 +61,12 @@ interface Project {
 }
 
 const listOfProjects: Project[] = [
+    {
+        title: 'Revolut',
+        background: 'black',
+        image: ImageRevolut,
+        content: <Revolut />,
+    },
     {
         title: 'Farfetch',
         background: 'white',

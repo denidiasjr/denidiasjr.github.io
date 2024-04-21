@@ -21,17 +21,29 @@ const NameSpan = styled.span`
 const FirstParagraph = styled.p`
     color: #c2e7d9;
     font-size: 2.4rem;
+
+    @media (max-width: 871px) {
+        font-size: calc(1.5vw + 1.2rem);
+    }
 `;
 
 const SecondParagraph = styled.p`
     font-size: 6.4rem;
     font-weight: 500;
+
+    @media (max-width: 871px) {
+        font-size: calc(1.5vw + 4.8rem);
+    }
 `;
 
 const ThirdParagraph = styled.p`
     font-size: 3.6rem;
     display: inline-block;
     opacity: 0.6;
+
+    @media (max-width: 871px) {
+        font-size: calc(1.5vw + 2.4rem);
+    }
 `;
 
 export const Main = () => {

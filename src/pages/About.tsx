@@ -67,9 +67,9 @@ export const About = () => {
                     <br />
                     <br />
                     Since then, I&apos;ve been worked in companies and projects
-                    from multiple segments, such as breweries, luxury platforms
-                    and condominium management. My main focus today is on
-                    front-end, but I&apos;ve also worked with mobile apps and
+                    from multiple segments, such as fintech, breweries, luxury
+                    platforms and condominium management. My main focus today is
+                    on front-end, but I&apos;ve also worked with mobile apps and
                     backend.
                     <br />
                     <br />
