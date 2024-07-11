@@ -27,8 +27,8 @@ const App = () => {
     return (
         <BrowserRouter>
             <MainContainer>
-                <Header />
                 <AnimatePresence>
+                    <Header />
                     <RouterPaths />
                 </AnimatePresence>
             </MainContainer>
