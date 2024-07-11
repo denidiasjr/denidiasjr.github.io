@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.72d2cb42.css",
-    "main.js": "/static/js/main.97269f5f.js",
-    "static/media/under_construction.png": "/static/media/under_construction.6a8f832d110b6a59461e.png",
+    "main.css": "/static/css/main.9b1b8df5.css",
+    "main.js": "/static/js/main.a2cae291.js",
+    "static/media/profile.png": "/static/media/profile.c42549a3672e990b88b3.png",
+    "static/media/siicusp.png": "/static/media/siicusp.de25158154d54d2e67ee.png",
+    "static/media/superior-industries.png": "/static/media/superior-industries.45b18c58650534d24d4e.png",
+    "static/media/10i9.png": "/static/media/10i9.02a9afa9486417ae0d41.png",
+    "static/media/venturus.png": "/static/media/venturus.1db753c09e0ea41f5d46.png",
+    "static/media/recanto-criativo.png": "/static/media/recanto-criativo.1557c63deab2e821b3d6.png",
+    "static/media/superlogica.png": "/static/media/superlogica.69c9b63952ae2bd96861.png",
+    "static/media/heineken.png": "/static/media/heineken.8e0569f27f95c243baff.png",
+    "static/media/bees.png": "/static/media/bees.4a299efbc9819f7a5d4a.png",
+    "static/media/ifms.png": "/static/media/ifms.0ba111d35b34af47bdc5.png",
     "index.html": "/index.html",
-    "main.72d2cb42.css.map": "/static/css/main.72d2cb42.css.map",
-    "main.97269f5f.js.map": "/static/js/main.97269f5f.js.map"
+    "main.9b1b8df5.css.map": "/static/css/main.9b1b8df5.css.map",
+    "main.a2cae291.js.map": "/static/js/main.a2cae291.js.map"
   },
   "entrypoints": [
-    "static/css/main.72d2cb42.css",
-    "static/js/main.97269f5f.js"
+    "static/css/main.9b1b8df5.css",
+    "static/js/main.a2cae291.js"
   ]
 }
