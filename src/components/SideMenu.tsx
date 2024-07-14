@@ -58,6 +58,14 @@ const StyledLink = styled(Link)`
     }
 `;
 
+const ResumeButton = styled(StyledLink)`
+    background: #6231eb;
+
+    &:hover {
+        background-color: #6231eb;
+    }
+`;
+
 const MobileMenuLinks = styled.div`
     display: flex;
     flex-direction: column;
@@ -95,19 +103,14 @@ export const SideMenu = ({ onClose }: SideMenuProps) => {
         );
     });
 
-    const resumeStyles = {
-        background: '#6231eb',
-    };
-
     renderedLinks.push(
-        <StyledLink
+        <ResumeButton
             to={{ pathname: '/Deni_CV.pdf' }}
             target='_blank'
             download
-            style={resumeStyles}
         >
             Resume <FontAwesomeIcon icon={faDownload} />
-        </StyledLink>,
+        </ResumeButton>,
     );
 
     return createPortal(

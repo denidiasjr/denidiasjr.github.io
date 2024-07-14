@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faDownload, faHome } from '@fortawesome/free-solid-svg-icons';
 import { useResponsive } from '../hooks/useResponsive';
 import SideMenu from './SideMenu';
+import LanguageDropdown from './LanguageDropdown';
 
 const ContainerHeader = styled.header`
     font-size: 2.4rem;
@@ -45,6 +46,20 @@ const StyledLink = styled(Link)`
     }
 `;
 
+const ResumeButton = styled(StyledLink)`
+    background: #6231eb;
+
+    &:hover {
+        background-color: #6231eb;
+    }
+`;
+
+const ContainerRightAligned = styled.div`
+    margin-left: auto;
+    display: flex;
+    gap: 2.4rem;
+`;
+
 const links = {
     '/': <FontAwesomeIcon icon={faHome} />,
     '/about': 'About',
@@ -72,6 +87,9 @@ export const Header = () => {
             <ContainerHeader>
                 <MenuButton icon={faBars} onClick={handleSideMenu} />
                 {isSideMenuOpen && <SideMenu onClose={handleSideMenu} />}
+                <ContainerRightAligned>
+                    <LanguageDropdown />
+                </ContainerRightAligned>
             </ContainerHeader>
         );
     }
@@ -85,23 +103,22 @@ export const Header = () => {
         );
     });
 
-    const resumeStyles = {
-        marginLeft: 'auto',
-        background: '#6231eb',
-    };
-
-    renderedLinks.push(
-        <StyledLink
-            to={{ pathname: '/Deni_CV.pdf' }}
-            target='_blank'
-            download
-            style={resumeStyles}
-        >
-            Resume <FontAwesomeIcon icon={faDownload} />
-        </StyledLink>,
+    return (
+        <ContainerHeader>
+            {renderedLinks}
+            <ContainerRightAligned>
+                <LanguageDropdown />
+                <ResumeButton
+                    key={'resume'}
+                    to={{ pathname: '/Deni_CV.pdf' }}
+                    target='_blank'
+                    download
+                >
+                    Resume <FontAwesomeIcon icon={faDownload} />
+                </ResumeButton>
+            </ContainerRightAligned>
+        </ContainerHeader>
     );
-
-    return <ContainerHeader>{renderedLinks}</ContainerHeader>;
 };
 
 export default Header;
