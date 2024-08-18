@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { SocialMediaIcons, TechnologyName } from '../components';
 import { motion } from 'framer-motion';
+import { Trans, useTranslation } from 'react-i18next';
 
 const SectionContainer = styled(motion.section)`
     flex-grow: 1;
@@ -47,20 +48,30 @@ const ThirdParagraph = styled.p`
 `;
 
 export const Main = () => {
+    const { t } = useTranslation();
+
     return (
         <SectionContainer
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <FirstParagraph>Hello world!</FirstParagraph>
+            <FirstParagraph>{t('main.hello_world')}</FirstParagraph>
             <SecondParagraph>
-                My name is <NameSpan>Deni Junior</NameSpan>
+                <Trans
+                    i18nKey={'main.my_name_is'}
+                    components={{ highlight: <NameSpan /> }}
+                    values={{
+                        myName: 'Deni Junior',
+                    }}
+                />
                 <br />
             </SecondParagraph>
             <ThirdParagraph>
-                I&apos;m a software engineer experienced with <TechnologyName />
-                .
+                <Trans
+                    i18nKey={'main.experienced_with'}
+                    components={{ technology: <TechnologyName /> }}
+                />
             </ThirdParagraph>
             <SocialMediaIcons />
         </SectionContainer>

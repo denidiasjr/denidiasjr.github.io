@@ -3,9 +3,11 @@ import styled from '@emotion/styled';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faDownload, faHome } from '@fortawesome/free-solid-svg-icons';
-import { useResponsive } from '../hooks/useResponsive';
+import { useResponsive, useNavLinks } from '../hooks';
 import SideMenu from './SideMenu';
 import LanguageDropdown from './LanguageDropdown';
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 const ContainerHeader = styled.header`
     font-size: 2.4rem;
@@ -60,16 +62,12 @@ const ContainerRightAligned = styled.div`
     gap: 2.4rem;
 `;
 
-const links = {
-    '/': <FontAwesomeIcon icon={faHome} />,
-    '/about': 'About',
-    '/projects': 'Projects',
-    '/blog': 'Blog',
-};
-
 export const Header = () => {
     const location = useLocation();
     const { isMobile } = useResponsive();
+    const { t } = useTranslation();
+    const links = useNavLinks();
+
     const [isSideMenuOpen, showSideMenu] = useState(false);
 
     const handleSideMenu = () => {
@@ -114,7 +112,7 @@ export const Header = () => {
                     target='_blank'
                     download
                 >
-                    Resume <FontAwesomeIcon icon={faDownload} />
+                    {t('nav.resume')} <FontAwesomeIcon icon={faDownload} />
                 </ResumeButton>
             </ContainerRightAligned>
         </ContainerHeader>

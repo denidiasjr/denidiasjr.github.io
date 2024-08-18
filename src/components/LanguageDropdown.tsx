@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Dropdown = styled.div``;
 
@@ -56,9 +57,18 @@ const languageMapper: LanguageMapper = {
     pt: '🇧🇷 PT',
 };
 
+const mapi18nLanguage = (i18nLanguage: string): keyof LanguageMapper => {
+    if (i18nLanguage == 'pt' || i18nLanguage == 'en') {
+        return i18nLanguage;
+    }
+    return 'en';
+};
+
 export const LanguageDropdown = () => {
-    const [selectedLanguage, setSelectedLanguage] =
-        useState<keyof LanguageMapper>('en');
+    const { i18n } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState<
+        keyof LanguageMapper
+    >(mapi18nLanguage(i18n.language));
     const [isDropdownVisible, showDropdown] = useState(false);
 
     const handleDropdownClick = () => {
@@ -67,6 +77,7 @@ export const LanguageDropdown = () => {
 
     const handleItemClick = (language: keyof LanguageMapper) => {
         setSelectedLanguage(language);
+        i18n.changeLanguage(language);
         showDropdown(false);
     };
 

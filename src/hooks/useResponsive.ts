@@ -11,6 +11,7 @@ export const useResponsive = (threshold: number = 871) => {
     useEffect(() => {
         window.addEventListener('resize', onResize);
         return () => window.removeEventListener('resize', onResize);
+        // eslint-disable-next-line
     }, []);
 
     return {

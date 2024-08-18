@@ -1,0 +1,9 @@
+{
+    "main.hello_world": "Hello world!",
+    "main.my_name_is": "My name is <highlight>{{myName}}</highlight>",
+    "main.experienced_with": "I'm a software engineer experienced with <technology />",
+    "nav.about": "About",
+    "nav.projects": "Projects",
+    "nav.blog": "Blog",
+    "nav.resume": "Resume"
+}

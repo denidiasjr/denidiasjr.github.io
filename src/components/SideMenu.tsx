@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faDownload, faHome } from '@fortawesome/free-solid-svg-icons';
 import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
+import { useNavLinks } from '../hooks';
+import { useTranslation } from 'react-i18next';
 
 const SideMenuContainer = styled.div`
     position: fixed;
@@ -77,18 +79,14 @@ const MobileMenuLinks = styled.div`
     width: 90%;
 `;
 
-const links = {
-    '/': <FontAwesomeIcon icon={faHome} />,
-    '/about': 'About',
-    '/projects': 'Projects',
-    '/blog': 'Blog',
-};
-
 interface SideMenuProps {
     onClose: VoidFunction;
 }
 
 export const SideMenu = ({ onClose }: SideMenuProps) => {
+    const links = useNavLinks();
+    const { t } = useTranslation();
+
     const renderedLinks = Object.entries(links).map(([path, content]) => {
         const className = path === location.pathname ? 'selected' : '';
         return (
@@ -109,7 +107,7 @@ export const SideMenu = ({ onClose }: SideMenuProps) => {
             target='_blank'
             download
         >
-            Resume <FontAwesomeIcon icon={faDownload} />
+            {t('nav.resume')} <FontAwesomeIcon icon={faDownload} />
         </ResumeButton>,
     );
 
