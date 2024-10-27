@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProfileImage from '../images/profile.png';
 import styled from '@emotion/styled';
+import { useTranslation } from 'react-i18next';
 
 const SectionContainer = styled(motion.section)`
     flex-grow: 1;
@@ -45,6 +46,8 @@ const AboutText = styled.p`
 `;
 
 export const About = () => {
+    const { t } = useTranslation();
+
     return (
         <SectionContainer
             initial={{ opacity: 0, x: 24 }}
@@ -55,26 +58,19 @@ export const About = () => {
             <AboutGroup>
                 <Image src={ProfileImage} />
                 <AboutText>
-                    Hi there! 👋
-                    <br />
-                    <br /> My name is Deni, I&apos;m a brazilian currently based
-                    on Porto, Portugal 🇵🇹🇧🇷
+                    {t('about.hi_there')} 👋
                     <br />
                     <br />
-                    I started my journey through the world of the web
-                    development back to 2015, when I started to work as a public
-                    employee on IFMS.
+                    {t('about.my_name_is')} 🇵🇹🇧🇷
                     <br />
                     <br />
-                    Since then, I&apos;ve been worked in companies and projects
-                    from multiple segments, such as fintech, breweries, luxury
-                    platforms and condominium management. My main focus today is
-                    on front-end, but I&apos;ve also worked with mobile apps and
-                    backend.
+                    {t('about.my_journey_started')}
                     <br />
                     <br />
-                    Go to the projects tab and see all my professional and
-                    personal projects! 😁
+                    {t('about.worked_in_companies')}
+                    <br />
+                    <br />
+                    {t('about.go_to_projects')} 😁
                 </AboutText>
             </AboutGroup>
         </SectionContainer>

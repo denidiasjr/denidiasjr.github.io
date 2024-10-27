@@ -5,5 +5,10 @@
     "nav.about": "About",
     "nav.projects": "Projects",
     "nav.blog": "Blog",
-    "nav.resume": "Resume"
+    "nav.resume": "Resume",
+    "about.hi_there": "Hi there!",
+    "about.my_name_is": "My name is Deni, I'm a brazilian currently based on Porto, Portugal",
+    "about.my_journey_started": "I started my journey through the world of the web development back to 2015, when I started to work as a public employee on IFMS.",
+    "about.worked_in_companies": "Since then, I've been worked in companies and projects from multiple segments, such as fintech, breweries, luxury platforms and condominium management. My main focus today is on front-end, but I've also worked with mobile apps and backend.",
+    "about.go_to_projects": "Go to the projects tab and see all my professional and personal projects!"
 }
