@@ -1,28 +1,20 @@
 import React from 'react';
 import { List, ListItem, Text } from '../project-builder';
+import { useTranslation } from 'react-i18next';
 
-export const Farfetch = () => (
-    <>
-        <Text>
-            Worked in the post purchase team of Farfetch Marketplace, having the
-            accountability of the front end modules for pages like Orders,
-            Returns, Address Book and Account Details.
-        </Text>
-        <List>
-            <ListItem>
-                Work with front end technologies as React JS, Next JS,
-                Storybook, Typescript, HTML and CSS.
-            </ListItem>
-            <ListItem>
-                Experience with distributed version controls systems like Git
-                and GitLab.
-            </ListItem>
-            <ListItem>
-                Experience working within a Continuous delivery and Agile
-                environment.
-            </ListItem>
-        </List>
-    </>
-);
+export const Farfetch = () => {
+    const { t } = useTranslation();
+
+    return (
+        <>
+            <Text>{t('projects.farfetch.description')}</Text>
+            <List>
+                <ListItem>{t('projects.farfetch.firstItem')}</ListItem>
+                <ListItem>{t('projects.farfetch.secondItem')}</ListItem>
+                <ListItem>{t('projects.farfetch.thirdItem')}</ListItem>
+            </List>
+        </>
+    );
+};
 
 export default Farfetch;

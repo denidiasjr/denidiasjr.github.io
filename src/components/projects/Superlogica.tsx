@@ -1,43 +1,41 @@
 import React from 'react';
 import { Heading, List, ListItem } from '../project-builder';
+import { useTranslation } from 'react-i18next';
 
-export const Superlogica = () => (
-    <>
-        <Heading as='h2'>Mobile Developer</Heading>
-        <List>
-            <ListItem>
-                Work with Mobile technologies for Android/iOS using React
-                Native.
-            </ListItem>
-            <ListItem>Work with Mobile App mockups using Figma.</ListItem>
-            <ListItem>
-                Experience in push notifications and realtime database using
-                Firebase.
-            </ListItem>
-            <ListItem>
-                Experience with monitoring application using New Relic and
-                Fabric.
-            </ListItem>
-        </List>
-        <Heading as='h2'>Web Developer</Heading>
-        <List>
-            <ListItem>
-                Work with Web technologies using Zend Framework, PHP, HTML, CSS,
-                JS and JQuery.
-            </ListItem>
-            <ListItem>
-                Experience with agile methods as Scrum and Kanban.
-            </ListItem>
-            <ListItem>Experience with unit test using PHP Unit.</ListItem>
-            <ListItem>
-                Experience with distributed version controls systems using
-                Github and GitFlow.
-            </ListItem>
-            <ListItem>
-                Experience with monitoring application using New Relic.
-            </ListItem>
-        </List>
-    </>
-);
+export const Superlogica = () => {
+    const { t } = useTranslation();
+
+    return (
+        <>
+            <Heading as='h2'>
+                {t('projects.superlogica.mobile.description')}
+            </Heading>
+            <List>
+                <ListItem>
+                    {t('projects.superlogica.mobile.firstItem')}
+                </ListItem>
+                <ListItem>
+                    {t('projects.superlogica.mobile.secondItem')}
+                </ListItem>
+                <ListItem>
+                    {t('projects.superlogica.mobile.thirdItem')}
+                </ListItem>
+                <ListItem>
+                    {t('projects.superlogica.mobile.fourthItem')}
+                </ListItem>
+            </List>
+            <Heading as='h2'>
+                {t('projects.superlogica.web.description')}
+            </Heading>
+            <List>
+                <ListItem>{t('projects.superlogica.web.firstItem')}</ListItem>
+                <ListItem>{t('projects.superlogica.web.secondItem')}</ListItem>
+                <ListItem>{t('projects.superlogica.web.thirdItem')}</ListItem>
+                <ListItem>{t('projects.superlogica.web.fourthItem')}</ListItem>
+                <ListItem>{t('projects.superlogica.web.fifthItem')}</ListItem>
+            </List>
+        </>
+    );
+};
 
 export default Superlogica;

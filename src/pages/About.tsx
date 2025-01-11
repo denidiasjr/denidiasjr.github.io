@@ -54,7 +54,7 @@ export const About = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <Heading>About</Heading>
+            <Heading>{t('nav.about')}</Heading>
             <AboutGroup>
                 <Image src={ProfileImage} />
                 <AboutText>
