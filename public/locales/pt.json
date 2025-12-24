@@ -45,5 +45,10 @@
     "projects.venturus.firstItem": "Trabalhei com tecnologias de front end como React JS, HTML e CSS.",
     "projects.venturus.secondItem": "Experiência com tecnologias de backend como Node JS e Express.",
     "projects.venturus.thirdItem": "Experiência com sistemas de controle de versão como Git e GitLab.",
-    "projects.venturus.fourthItem": "Experiência trabalhando em um ambiente ágil e de entrega contínua."
+    "projects.venturus.fourthItem": "Experiência trabalhando em um ambiente ágil e de entrega contínua.",
+    "projects.heineken.description": "Trabalhei como funcionário da 10i9 em um projeto interno dentro da Heineken Brasil. O objetivo foi documentar todos os requisitos do sistema, apresentar mockups para as aplicações web e mobile e definir a arquitetura do banco de dados.",
+    "projects.heineken.link": "Mais definições sobre o projeto podem ser encontradas <1>aqui</1>",
+    "projects.heineken.firstItem": "Trabalhei com mockups para mobile e web usando Figma, HTML, CSS e Bootstrap.",
+    "projects.heineken.secondItem": "Trabalhei com banco de dados Oracle.",
+    "projects.heineken.thirdItem": "Experiência com validações de requisitos para os usuários da aplicação."
 }
